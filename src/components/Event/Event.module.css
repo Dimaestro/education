@@ -1,0 +1,9 @@
+.container {
+  margin: 0 auto;
+  margin-top: 10px;
+  flex-basis: calc((100% / 3) - 30px);
+
+  background-color: #64cbf732;
+  border-radius: 10px;
+  padding: 10px;
+}
