@@ -1,13 +1,21 @@
-const TodoList = ({ todos, onDeleteTodoItem }) => {
+import clsx from 'clsx';
+import styles from './TodoList.module.css';
+
+const TodoList = ({ todos, onDeleteTodoItem, onToogleCompleted }) => {
   return (
-    <ul>
-      {todos.map(({id, text}) => {
+    <ul className={styles.list}>
+      {todos.map(({id, text, completed}) => {
         return (
-          <li key={id}>
-            <p>
+          <li key={id} className={clsx(styles.item, completed && styles.itemActive)}>
+            <input
+              type='checkbox'
+              checked={completed}
+              onChange={() => onToogleCompleted(id)}
+            />
+            <p className={styles.text}>
               {text}
             </p>
-            <button type="button" onClick={() => onDeleteTodoItem(id)}>Delete</button>
+            <button className={styles.button} type="button" onClick={() => onDeleteTodoItem(id)}>Delete</button>
           </li>
         )
       })}

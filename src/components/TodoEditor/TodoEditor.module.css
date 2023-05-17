@@ -1,0 +1,38 @@
+.form {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid hsla(222, 91%, 57%, 0.621);
+  border-radius: 10px;
+  padding: 10px;
+  width: 600px;
+}
+
+.textarea {
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.button {
+  width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: rgba(150, 25, 245, 0.475);
+  color: #fff;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.button:hover {
+  background-color: rgba(9, 212, 239, 0.53);
+  box-shadow: 2px 2px 2px rgba(9, 204, 239, 0.3);
+}
