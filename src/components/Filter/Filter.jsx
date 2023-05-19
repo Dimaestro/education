@@ -4,7 +4,7 @@ const Filter = ({ filter, onChange }) => {
   return (
     <label className={styles.container}>
       Filter
-      <input type="text" name="filter" value={filter} onChange={onChange} />
+      <input className={styles.input} type="text" name="filter" value={filter} onChange={onChange} />
     </label>
   );
 };
